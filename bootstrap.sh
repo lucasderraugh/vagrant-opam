@@ -5,11 +5,18 @@ dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 /sbin/swapon /swapfile
 echo '/swapfile swap swap defaults 0 0' >> /etc/fstab
 
-apt-get update
-apt-get install -y python-software-properties build-essential m4
 add-apt-repository ppa:avsm/ppa
 apt-get update
-apt-get install -y ocaml ocaml-native-compilers camlp4 camlp4-extra opam git libssl-dev emacs vim nginx tuareg-mode auto-complete-el aspcud
+apt-get install -y python-software-properties build-essential m4 \
+                   ocaml ocaml-native-compilers camlp4 camlp4-extra opam \
+                   git libssl-dev subversion \
+                   emacs tuareg-mode auto-complete-el xemacs21 \
+                   vim vim-gtk \
+                   nginx \
+                   aspcud \
+                   texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra \
+                   xpdf
+
 sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
 
 cat > /etc/motd.tail <<'EOF'
