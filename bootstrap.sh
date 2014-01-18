@@ -14,8 +14,9 @@ apt-get install -y python-software-properties build-essential m4 \
                    vim \
                    nginx \
                    aspcud
-apt-get install -y --no-install-recommends
-                   texlive-latex-base texlive-latex-extra
+apt-get install -y --no-install-recommends \
+                   texlive-latex-base texlive-latex-extra \
+                   texlive-fonts-recommended texlive-fonts-extra
 apt-get install -y xemacs21 vim-gtk xpdf
 
 sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
