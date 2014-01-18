@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-3110.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-git.sh"
 
 end
 
