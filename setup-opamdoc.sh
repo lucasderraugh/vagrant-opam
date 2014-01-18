@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 set -e
-PACKAGES="ssl core_extended async js_of_ocaml core_bench cohttp cryptokit menhir"
-
-# TODO: release opam-doc.0.3 to not need this
-opam pin opam-doc git://github.com/ocamllabs/opam-doc
+PACKAGES="async pa_ounit"
 
 export OPAMYES=1
 export OPAMJOBS=2
-opam install opam-doc merlin utop cohttp js_of_ocaml oasis
+opam install opam-doc merlin utop
 opam install ${PACKAGES}
 
 # Generate OPAM doc in ~/.opam/doc/doc
