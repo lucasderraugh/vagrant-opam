@@ -10,7 +10,7 @@ popd
 cat >> ~/.bashrc <<EOF
 
 # 3110 tools
-export PATH="$PATH:$HOME/3110-tools/cs3110-cli/student"
-export TEXINPUTS="$HOME/3110-tools/tex:$TEXINPUTS:."
+export PATH="$$PATH:$$HOME/3110-tools/cs3110-cli/student"
+export TEXINPUTS="$$HOME/3110-tools/tex:$$TEXINPUTS:."
 
 EOF
