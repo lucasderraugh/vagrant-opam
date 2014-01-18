@@ -10,12 +10,13 @@ apt-get update
 apt-get install -y python-software-properties build-essential m4 \
                    ocaml ocaml-native-compilers camlp4 camlp4-extra opam \
                    git libssl-dev subversion \
-                   emacs tuareg-mode auto-complete-el xemacs21 \
-                   vim vim-gtk \
+                   emacs tuareg-mode auto-complete-el \
+                   vim \
                    nginx \
-                   aspcud \
-                   texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra \
-                   xpdf
+                   aspcud
+apt-get install -y --no-install-recommends
+                   texlive-latex-base texlive-latex-extra
+apt-get install -y xemacs21 vim-gtk xpdf
 
 sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
 
