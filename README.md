@@ -1,15 +1,40 @@
-Vagrant configuration for an OCaml and OPAM installation.
+== Instructions for getting the VM up and running ==
 
-* Installs `utop`, `merlin`.
-* Configures Vim with Synastic and sensible defaults.
-* Listens on `http://localhost:8000` on the host machine to 
-  serve the documentation.
+===
 
-Build a box using:
+1. Download and install vagrant from http://www.vagrantup.com/downloads.html
 
-```
-$ vagrant up
-$ vagrant ssh
-```
+2. Download and install x windows and a shell
 
-From this a checkout of this directory.
+  - on Windows
+      TODO
+
+  - on Linux
+      skip this step.
+
+  - on MacOS
+      TODO
+
+3. Download and install the 3110 virtual machine
+
+   TODO: replace this with http/zip?
+git clone https://github.com/cs3110/vagrant-opam.git
+cd vagrant-opam
+vagrant up
+
+Note: vagrant up will take a long time the first time (TODO: estimate?)
+
+4. Log into your new virtual machine:
+
+vagrant ssh
+
+5. When you are done, log out by typing control-D
+
+6. The virtual machine is still running.  You can suspend it by typing
+
+vagrant suspend
+
+and then restart it later by typing
+
+vagrant up
+
