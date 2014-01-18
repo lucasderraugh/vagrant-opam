@@ -1,0 +1,9 @@
+ - figure out PS6 gui
+ - figure out shared folder (/vagrant doesn't work at all on my machine, but we
+                             should also figure out what the right protocol for
+                             the students should be.)
+ - test all of the past psets
+ - installation instructions (cross platform)
+ - test on windows / macos
+ - try to trim disk size / install time
+ - figure out hosting / distribution
