@@ -1,40 +1,39 @@
-# CS 3110 VM #
+# Instructions for getting the VM up and running
 
-## Instructions ##
-Follow these instructions to get the VM up and running.
+===
 
-1. Download and install [virtual box](https://www.virtualbox.org/wiki/Downloads)
+1. Download and install vagrant from [here](http://www.vagrantup.com/downloads.htmlli)
 
-2. Download the [3110 virtual machine image](https://dl.dropboxusercontent.com/u/3989078/cs3110-VM.ova)
+2. Download and install x windows and a shell
 
-3. Import the VM
-    - run VirtualBox
-    - select File -> Import Appliance
-    - select "Open Appliance", and choose the default settings
+  - on Windows
+      TODO
 
-4. Run the VM
-    - select cs3110-VM from the list
-    - click "Start"
+  - on Linux
+      skip this step.
 
-## Building the VM image ##
+  - on MacOS
+      TODO
 
-Follow these instructions if you want to reconfigure or rebuild the VM
+3. Download and install the 3110 virtual machine
 
-1. vagrant up.
+   TODO: replace this with http/zip?
+git clone https://github.com/cs3110/vagrant-opam.git
+cd vagrant-opam
+vagrant up
 
-	note: for some reason I don't understand, this fails.  I have to then do
+Note: vagrant up will take a long time the first time (TODO: estimate?)
 
-		$ vagrant ssh
-		$ sudo /usr/share/debconf/fix_db.pl
-		$ logout
-		$ vagrant provision
+4. Log into your new virtual machine:
 
-	it seems to work the second time around...
+vagrant ssh
 
-2. vagrant halt
-3. run Virtual Box
-4. start the machine
-5. change to fullscreen
-6. halt the machine
-7. export the VM appliance (in the "machine" menu)
+5. When you are done, log out by typing control-D
 
+6. The virtual machine is still running.  You can suspend it by typing
+
+vagrant suspend
+
+and then restart it later by typing
+
+vagrant up
