@@ -8,7 +8,7 @@ make
 popd
 
 # install tex stuff
-sudo cp -rT cs3110-tools/texmf /usr/local/share/texmf
+sudo cp -rT 3110-tools/texmf /usr/local/share/texmf
 sudo mktexlsr
 sudo updmap-sys Map=fourier.map
 sudo updmap-sys Map=dejavu-type1.map
