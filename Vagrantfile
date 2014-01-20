@@ -7,10 +7,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-i386-vagrant-disk1.box"
   config.vm.network :forwarded_port, guest: 80, host: 8000
 
-  config.ssh.forward_x11 = true
+  config.ssh.forward_x11 = false
 
   config.vm.provider :virtualbox do |vb|
-    vb.gui = false
+    vb.gui = true
     vb.name = "cs3110-VM"
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
