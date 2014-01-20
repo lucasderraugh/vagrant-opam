@@ -1,5 +1,8 @@
 cat >> ~/.gitconfig <<EOF
 
+[credential]
+	helper = store
+
 [alias]
 	co = checkout
 	ci = commit
