@@ -7,3 +7,7 @@
  - test on windows / macos
  - try to trim disk size / install time
  - figure out hosting / distribution
+
+ - utop isn't in path by default; need to use opam config env
+ - figure out how to not install texlive-fonts-extra
+

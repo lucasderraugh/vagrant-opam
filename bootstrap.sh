@@ -13,10 +13,10 @@ apt-get install -y python-software-properties build-essential m4 \
                    emacs tuareg-mode auto-complete-el \
                    vim \
                    nginx \
-                   aspcud
+                   aspcud \
+                   unzip
 apt-get install -y --no-install-recommends \
-                   texlive-latex-base texlive-latex-extra \
-                   texlive-fonts-recommended texlive-fonts-extra
+                   texlive-latex-base texlive-latex-extra pgf
 apt-get install -y xemacs21 vim-gtk xpdf
 
 sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
