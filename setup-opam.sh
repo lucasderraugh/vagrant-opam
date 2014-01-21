@@ -17,10 +17,10 @@ cat > ~/.ocamlinit <<EOF
 #camlp4o;;
 EOF
 
-grep "opam config" ~/.bashrc > /dev/null || cat >> ~/.bashrc <<EOF
+grep "opam config" ~/.bashrc > /dev/null || (cat >> ~/.bashrc <<EOF
 
 # opam config
 eval \`opam config env\`
 
-EOF 
+EOF )
 
