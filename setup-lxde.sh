@@ -1,6 +1,6 @@
 set -ex
 
-sudo apt-get install -y lxde
+sudo apt-get install -y lxde chromium-browser
 sudo sed "s/# autologin=dgod/autologin=vagrant/" -i /etc/lxdm/lxdm.conf
 sudo passwd -d vagrant
 
