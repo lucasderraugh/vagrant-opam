@@ -5,6 +5,8 @@ dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 /sbin/swapon /swapfile
 echo '/swapfile swap swap defaults 0 0' >> /etc/fstab
 
+host cs3110-vm
+
 add-apt-repository ppa:avsm/ppa
 apt-get update
 apt-get install -y python-software-properties build-essential m4 \
