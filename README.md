@@ -5,7 +5,7 @@ Follow these instructions to get the VM up and running.
 
 1. Download and install [virtual box](https://www.virtualbox.org/wiki/Downloads)
 
-2. Download the [3110 virtual machine image](https://www.dropbox.com/s/eyhumb5u2y2x6fw/cs3110-VM.ova)
+2. Download the [3110 virtual machine image](https://dl.dropboxusercontent.com/u/3989078/cs3110-VM.ova)
 
 3. Import the VM
     - run VirtualBox
