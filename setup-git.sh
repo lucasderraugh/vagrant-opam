@@ -1,7 +1,7 @@
 
 sudo apt-get install git
 
-cat >> ~/.gitconfig <<EOF
+cat > ~/.gitconfig <<EOF
 
 [credential]
 	helper = store
@@ -14,9 +14,12 @@ cat >> ~/.gitconfig <<EOF
 [core]
 	excludesfile = /home/vagrant/.gitignore_global
 
+[push]
+	default = simple
+
 EOF
 
-cat >> ~/.gitignore_global <<EOF
+cat > ~/.gitignore_global <<EOF
 # vim
 .*.sw?
 
