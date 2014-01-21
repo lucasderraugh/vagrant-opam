@@ -18,15 +18,18 @@ Follow these instructions to get the VM up and running.
 
 ## Building the VM image ##
 
-1. vagrant up
-   - note: for some reason I don't understand, this fails.  I have to then do
+Follow these instructions if you want to reconfigure or rebuild the VM
 
-         $ vagrant ssh
-         $ sudo /usr/share/debconf/fix_db.pl
-         $ logout
-         $ vagrant provision
+1. vagrant up.
 
-     it seems to work the second time around...
+	note: for some reason I don't understand, this fails.  I have to then do
+
+		$ vagrant ssh
+		$ sudo /usr/share/debconf/fix_db.pl
+		$ logout
+		$ vagrant provision
+
+	it seems to work the second time around...
 
 2. vagrant halt
 3. run Virtual Box
