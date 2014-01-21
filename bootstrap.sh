@@ -26,8 +26,9 @@ cat > /etc/motd.tail <<'EOF'
 
 Run 'utop' to get started with an interactive console.
 Documentation is available at http://localhost:8000/
+
 EOF
 
-rm /etc/update-motd.d/{50-landscape-sysinfo,51-cloudguest}
+rm -f /etc/update-motd.d/{50-landscape-sysinfo,51-cloudguest}
 
 run-parts /etc/update-motd.d/

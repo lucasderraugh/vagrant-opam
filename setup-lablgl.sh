@@ -1,3 +1,3 @@
-sudo apt-get build-dep liblablgl-ocaml
+sudo apt-get build-dep -y liblablgl-ocaml
 opam install lablgl
 

@@ -1,3 +1,4 @@
+set -ex
 
 [ -d 3110-tools ] || git clone https://github.com/cs3110/tools.git 3110-tools
 
