@@ -3,46 +3,35 @@
 ## Instructions ##
 Follow these instructions to get the VM up and running.
 
-1. Download and install [vagrant](http://www.vagrantup.com/downloads.html).
+1. Download and install [virtual box](https://www.virtualbox.org/wiki/Downloads)
 
-2. Download and install x windows, a shell, and VirtualBox
-    - on Windows
-        - **TODO**
-    - on Linux
-        - [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
-    - on MacOS
-        - **TODO**
+2. Download the [3110 virtual machine image](https://www.dropbox.com/s/eyhumb5u2y2x6fw/cs3110-VM.ova)
 
-3. Download and install the 3110 virtual machine
+3. Import the VM
+    - run VirtualBox
+    - select File -> Import Appliance
+    - select "Open Appliance", and choose the default settings
 
-   **TODO**: replace this with http/zip?
-   
-        git clone https://github.com/cs3110/vagrant-opam.git
-        cd vagrant-opam
-        vagrant up
+4. Run the VM
+    - select cs3110-VM from the list
+    - click "Start"
 
-   *Note*: `vagrant up` will take a long time the first time.
+## Building the VM image ##
 
-        real    42m1.079s
-        user    0m19.697s
-        sys     0m17.113s
+1. vagrant up
+   - note: for some reason I don't understand, this fails.  I have to then do
 
-4. Log into your new virtual machine:
+	vagrant ssh
+	sudo /usr/share/debconf/fix_db.pl
+	logout
+	vagrant provision
 
-        vagrant ssh
+     it seems to work the second time around...
 
-5. When you are done, log out by typing control-D
+2. vagrant halt
+3. run Virtual Box
+4. start the machine
+5. change to fullscreen
+6. halt the machine
+7. export the VM appliance (in the "machine" menu)
 
-6. The virtual machine is still running.  You can suspend it by typing
-
-        vagrant suspend
-
-   and then restart it later by typing
-
-        vagrant up
-
-## Resources ##
-- [Vagrant: Getting Started](http://docs.vagrantup.com/v2/getting-started/index.html)
-- [Vagrant Downloads](http://www.vagrantup.com/downloads.html)
-- [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
-- [VirtualBox User Manual](https://www.virtualbox.org/manual/UserManual.html)
