@@ -24,6 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-git.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-tex.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-lablgl.sh"
 
 end
 
