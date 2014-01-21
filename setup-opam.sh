@@ -10,6 +10,8 @@ opam init -a -y
 opam update
 opam upgrade
 
+opam install merlin utop async pa_ounit
+
 # Configure an .ocamlinit
 cat > ~/.ocamlinit <<EOF
 #use "topfind";;
@@ -17,10 +19,11 @@ cat > ~/.ocamlinit <<EOF
 #camlp4o;;
 EOF
 
-grep "opam config" ~/.bashrc > /dev/null || (cat >> ~/.bashrc <<EOF
+grep "opam config" ~/.bashrc > /dev/null || cat >> ~/.bashrc <<EOF
 
 # opam config
 eval \`opam config env\`
+alias ocaml=utop
 
-EOF )
+EOF
 
