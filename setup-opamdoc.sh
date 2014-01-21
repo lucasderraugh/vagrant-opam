@@ -19,4 +19,7 @@ EOF
 
 # Start web server for docs
 sudo apt-get install -y nginx
+
+sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
 sudo service nginx start
+

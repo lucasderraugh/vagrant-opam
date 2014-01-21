@@ -9,9 +9,7 @@ add-apt-repository ppa:avsm/ppa
 apt-get update
 apt-get install -y python-software-properties build-essential m4 \
                    subversion \
-                   unzip
-
-sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
+                   unzip \
 
 cat > /etc/motd.tail <<'EOF'
                ,,__
