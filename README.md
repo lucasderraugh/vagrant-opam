@@ -21,10 +21,10 @@ Follow these instructions to get the VM up and running.
 1. vagrant up
    - note: for some reason I don't understand, this fails.  I have to then do
 
-	vagrant ssh
-	sudo /usr/share/debconf/fix_db.pl
-	logout
-	vagrant provision
+		$ vagrant ssh
+		$ sudo /usr/share/debconf/fix_db.pl
+		$ logout
+		$ vagrant provision
 
      it seems to work the second time around...
 
