@@ -4,6 +4,9 @@ set -ex
 sudo apt-get install -y \
   ocaml ocaml-native-compilers camlp4 camlp4-extra opam
 
+export OPAMYES=1
+export OPAMJOBS=2
+
 # Initialize the .opam and .bashrc PATH
 opam init -a -y
 
