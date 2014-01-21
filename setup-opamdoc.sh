@@ -18,4 +18,5 @@ cat >> ~/.ocamlinit <<EOF
 EOF
 
 # Start web server for docs
+sudo apt-get install -y nginx
 sudo service nginx start

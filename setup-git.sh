@@ -1,3 +1,6 @@
+
+sudo apt-get install git
+
 cat >> ~/.gitconfig <<EOF
 
 [alias]
