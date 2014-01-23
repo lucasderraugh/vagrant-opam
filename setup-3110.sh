@@ -4,10 +4,5 @@ set -ex
 
 # install cs3110 command
 make -C 3110-tools/cs3110-cli/student/
+sudo make -C 3110-tools/cs3110-cli/student/ install
 
-grep "3110 tools" ~/.bashrc > /dev/null || cat >> ~/.bashrc <<EOF
-
-# 3110 tools
-export PATH="\$PATH:\$HOME/3110-tools/cs3110-cli/student"
-
-EOF
