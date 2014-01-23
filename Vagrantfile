@@ -29,6 +29,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-jre.sh"
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  config.vm.provision :shell, priveleged: false, :path => "clean-shutdown.sh"
 end
 
 # -*- mode: ruby -*-
