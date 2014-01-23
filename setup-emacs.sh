@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -ex
 
-sudo apt-get install -y emacs tuareg-mode auto-complete-el xemacs21
+sudo apt-get install emacs -y
 
 export OPAMYES=1
 opam install ocp-index ocp-indent
-[ -d ocaml-emacs-settings ] || git clone https://github.com/samoht/ocaml-emacs-settings.git
-ln -sf ocaml-emacs-settings/.emacs
-ln -sf ocaml-emacs-settings/.emacs.d/
+git clone https://github.com/cs3110/tools/
+mv tools/.emacs.d/ $HOME/.emacs.d/
+echo 'Emacs successfully installed'

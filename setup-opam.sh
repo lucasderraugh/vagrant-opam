@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 
-sudo apt-get install -y \
-  ocaml ocaml-native-compilers camlp4 camlp4-extra opam
+sudo apt-get install opam
 
 export OPAMYES=1
 export OPAMJOBS=2
@@ -14,6 +13,9 @@ opam update
 opam upgrade
 
 opam install merlin utop async pa_ounit
+
+opam switch 4.01.0
+eval `opam config env`
 
 # Configure an .ocamlinit
 cat > ~/.ocamlinit <<EOF
