@@ -1,6 +1,10 @@
 set -ex
 
+# TODO: this is embarrasingly bad...
+sudo apt-get install -y lxde chromium-browser || true
+sudo /usr/share/debconf/fix_db.pl
 sudo apt-get install -y lxde chromium-browser
+
 sudo sed "s/# autologin=dgod/autologin=vagrant/" -i /etc/lxdm/lxdm.conf
 sudo passwd -d vagrant
 
