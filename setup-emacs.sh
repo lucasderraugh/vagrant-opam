@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -ex
 
-sudo apt-get install emacs -y
+sudo apt-get install -y emacs
 
 export OPAMYES=1
 opam install ocp-index ocp-indent
-git clone https://github.com/cs3110/tools/
-mv tools/.emacs.d/ $HOME/.emacs.d/
+[ -d 3110-tools ] || git clone git@github.com:cs3110/tools.git 3110-tools
+mv 3110-tools/.emacs.d/ $HOME/.emacs.d/
 echo 'Emacs successfully installed'

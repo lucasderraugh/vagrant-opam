@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 
+sudo apt-get install -y ocaml
 sudo apt-get install -y opam
 
 export OPAMYES=1

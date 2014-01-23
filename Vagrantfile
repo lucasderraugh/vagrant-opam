@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
-  config.vm.provision :shell, priveleged: false, :path => "clean-shutdown.sh"
+  config.vm.provision :shell, privileged: false, :path => "clean-shutdown.sh"
 end
 
 # -*- mode: ruby -*-
