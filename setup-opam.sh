@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 
-sudo apt-get install opam
+sudo apt-get install -y opam
 
 export OPAMYES=1
 export OPAMJOBS=2
