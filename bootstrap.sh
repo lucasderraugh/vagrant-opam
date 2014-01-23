@@ -12,6 +12,7 @@ apt-get update
 apt-get install -y python-software-properties build-essential m4 \
                    subversion \
                    unzip \
+		   zip \
 
 cat > /etc/motd.tail <<'EOF'
                ,,__
