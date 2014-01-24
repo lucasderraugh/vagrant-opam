@@ -2,11 +2,12 @@
 
 set -ex
 
-#Git clone the sublime repo
-git clone https://github.com/TCattd/sublime-text-bash-installer.git
+## Download and install Sublime
+sudo add-apt-repository ppa:webupd8team/sublime-text-2
+sudo apt-get update
+sudo apt-get install sublime-text
 
-cd sublime-text-bash-installer
-
-sudo ./st3install
+## Add the alias to the bashrc
+echo "alias sublime=sublime-text-3" >> $HOME/.bashrc
 
 echo "Now you have Sublime Text from 3110!"
