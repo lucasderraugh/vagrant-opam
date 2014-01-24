@@ -1,5 +1,5 @@
 sudo apt-get install -y --no-install-recommends \
-    texlive-latex-base texlive-latex-extra texlive-fonts-recommended pgf xpdf
+    texlive-latex-base texlive-latex-extra pgf xpdf
 
 sudo apt-get install -y evince
 
