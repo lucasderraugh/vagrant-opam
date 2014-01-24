@@ -4,5 +4,5 @@ set -ex
 
 # install cs3110 command
 make -C 3110-tools/cs3110-cli/student/
-sudo make -C 3110-tools/cs3110-cli/student/ install
+make -C 3110-tools/cs3110-cli/student/ install
 
