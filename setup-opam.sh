@@ -33,3 +33,8 @@ alias ocaml=utop
 
 EOF
 
+
+# clean up .opam directory
+rm -rf ~/.opam/system
+rm -rf ~/.opam/4.01.0/build
+
