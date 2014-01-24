@@ -5,7 +5,7 @@ set -ex
 #Git clone the sublime repo
 [ -d sublime-installer ] || git clone https://github.com/TCattd/sublime-text-bash-installer.git sublime-installer
 
-cd sublime-text-bash-installer
+cd sublime-installer
 sudo ./st3install
 
 cd ~
