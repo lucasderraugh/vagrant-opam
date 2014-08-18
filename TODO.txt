@@ -2,6 +2,7 @@
  - figure out shared folder (/vagrant doesn't work at all on my machine, but we
                              should also figure out what the right protocol for
                              the students should be.)
+ - Bash completion for cs3110 command
  - test all of the past psets
  - installation instructions (cross platform)
  - test on windows / macos
