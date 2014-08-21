@@ -1,3 +1,4 @@
+ - opam install lablgl (not currently working)
  - figure out PS6 gui
  - figure out shared folder (/vagrant doesn't work at all on my machine, but we
                              should also figure out what the right protocol for
@@ -9,6 +10,5 @@
  - try to trim disk size / install time
  - figure out hosting / distribution
 
- - utop isn't in path by default; need to use opam config env
  - figure out how to not install texlive-fonts-extra
 

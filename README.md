@@ -22,7 +22,7 @@ git clone https://github.com/cs3110/vagrant-opam.git
 cd vagrant-opam
 vagrant up
 
-Note: vagrant up will take a long time the first time (TODO: estimate?)
+Note: vagrant up will take a long time (about an hour) the first time.
 
 4. Log into your new virtual machine:
 

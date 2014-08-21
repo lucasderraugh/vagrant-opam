@@ -1,40 +1,27 @@
-#!/usr/bin/env bash
-set -ex
+#!/bin/bash
 
-sudo apt-get install -y ocaml
-sudo apt-get install -y opam
+# MRC: The next line is from https://github.com/realworldocaml/book/wiki/Installation-Instructions
+sudo apt-get install -y curl build-essential m4 zlib1g-dev libssl-dev ocaml ocaml-native-compilers opam
+# MRC: The next line is a package we used to install, and I'll leave out for now.
+# sudo apt-get install -y camlp4-extra
 
 export OPAMYES=1
 export OPAMJOBS=2
-
-# Initialize the .opam and .bashrc PATH
 opam init -a -y
-
-opam update
-opam upgrade
-
-opam install merlin utop async pa_ounit
-
+eval `opam config env`
 opam switch 4.01.0
 eval `opam config env`
+
+opam install core utop pa_ounit qcheck 
+
+# MRC: Leaving these out for now
+# opam install async merlin
 
 # Configure an .ocamlinit
 cat > ~/.ocamlinit <<EOF
 #use "topfind";;
 #thread;;
 #camlp4o;;
+#require "core.top";;
+#require "core.syntax";;
 EOF
-
-grep "opam config" ~/.bashrc > /dev/null || cat >> ~/.bashrc <<EOF
-
-# opam config
-eval \`opam config env\`
-alias ocaml=utop
-
-EOF
-
-
-# clean up .opam directory
-rm -rf ~/.opam/system
-rm -rf ~/.opam/4.01.0/build
-
