@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # MRC: The next line is mostly from https://github.com/realworldocaml/book/wiki/Installation-Instructions
-sudo apt-get install -y curl build-essential m4 zlib1g-dev libssl-dev ocaml ocaml-native-compilers opam camlp4-extra
+sudo apt-get install -y curl build-essential m4 zlib1g-dev libssl-dev ocaml ocaml-native-compilers opam camlp4-extra zip
 
 export OPAMYES=1
 export OPAMJOBS=2
