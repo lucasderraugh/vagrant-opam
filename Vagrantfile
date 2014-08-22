@@ -18,9 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "bootstrap.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-opam.sh"
   # config.vm.provision :shell, privileged: false, :path => "setup-opamdoc.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-3110.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-3110.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-git.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-tex.sh"
@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-sublime.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-jre.sh"
 
-  config.vm.synced_folder ".", "/vagrant", disabled: true
+  # config.vm.synced_folder ".", "/vagrant", disabled: true
 
   # config.vm.provision :shell, privileged: false, :path => "clean-shutdown.sh"
 end
