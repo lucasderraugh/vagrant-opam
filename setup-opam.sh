@@ -7,12 +7,14 @@ sudo apt-get install -y curl build-essential m4 zlib1g-dev libssl-dev ocaml ocam
 
 export OPAMYES=1
 export OPAMJOBS=2
+
 opam init -a -y
 eval `opam config env`
 opam switch 4.01.0
 eval `opam config env`
 
-opam install core utop pa_ounit qcheck 
+# amw275: lablgl : ==> default: [ERROR] The compilation of lablgl.20120306 failed.
+opam install async utop merlin pa_ounit qcheck lablgl
 
 # MRC: Leaving these out for now
 # opam install async merlin
@@ -25,3 +27,10 @@ cat > ~/.ocamlinit <<EOF
 #require "core.top";;
 #require "core.syntax";;
 EOF
+
+cat >> ~/.bashrc <<EOF
+
+alias ocaml=utop
+
+EOF
+
