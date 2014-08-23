@@ -11,8 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
-    vb.name = "cs3110-VM"
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.name = "cs3110-studentVM"
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
@@ -27,6 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-lablgl.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-sublime.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-jre.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-misc.sh"
 
   # config.vm.synced_folder ".", "/vagrant", disabled: true
 
