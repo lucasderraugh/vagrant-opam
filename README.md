@@ -2,18 +2,15 @@
 
 ===
 
-1. Download and install vagrant from [here](http://www.vagrantup.com/downloads.htmlli)
+1. Download and install vagrant from [here](http://www.vagrantup.com/downloads.html)
 
 2. Download and install x windows and a shell
 
-  - on Windows
-      TODO
+  - on Windows TODO
 
-  - on Linux
-      skip this step.
+  - on Linux skip this step.
 
-  - on MacOS
-      TODO
+  - on MacOS TODO
 
 3. Download and install the 3110 virtual machine
 
@@ -37,3 +34,5 @@ vagrant suspend
 and then restart it later by typing
 
 vagrant up
+
+7. You can also control your VM through VirtualBox itself.

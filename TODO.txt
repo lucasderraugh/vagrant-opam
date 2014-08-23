@@ -1,14 +1,11 @@
- - opam install lablgl (not currently working)
- - figure out PS6 gui
- - figure out shared folder (/vagrant doesn't work at all on my machine, but we
-                             should also figure out what the right protocol for
-                             the students should be.)
+ - introduce new targets for the 3110-tools/cs3110-cli Makefile
+     to build staff or student versions
+     (avoid the need to comment/uncomment the target list in cli_main.ml)
  - Bash completion for cs3110 command
- - test all of the past psets
- - installation instructions (cross platform)
- - test on windows / macos
- - try to trim disk size / install time
- - figure out hosting / distribution
-
+ - more fleshed-out installation instructions (cross platform)
+ - test for the past psets
  - figure out how to not install texlive-fonts-extra
+ - try to trim disk size / install time
 
+ - figure out PS6 gui
+ - figure out shared folder (/vagrant ? as of spring 2014, not working)
