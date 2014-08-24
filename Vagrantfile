@@ -29,7 +29,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-jre.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-misc.sh"
 
-  # config.vm.synced_folder ".", "/vagrant", disabled: true
+  # disable the synced folder feature (Windows bug if commented out)
+  config.vm.synced_folder ".", "/vagrant", disabled: true
 
   # config.vm.provision :shell, privileged: false, :path => "clean-shutdown.sh"
 end

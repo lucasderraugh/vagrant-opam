@@ -17,3 +17,4 @@ sudo apt-get install -y chromium-browser
 mkdir -p ~/.config
 cp -rT 3110-tools/config ~/.config
 
+sudo ln -s ~/.config/cs3110.bash_complete /etc/bash_completion.d/cs3110
