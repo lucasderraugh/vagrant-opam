@@ -3,16 +3,17 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
-  config.vm.box = "trusty32"
-  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box"
+  config.vm.box = "ubuntu/vivid32"
+  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/vivid/current/vivid-server-cloudimg-i386-vagrant-disk1.box"
   config.vm.network :forwarded_port, guest: 80, host: 8000
 
   config.ssh.forward_x11 = false
 
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
-    vb.name = "cs3110-staffVM"
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.name = "cs3110-vm"
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--vram", "16"]
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
@@ -34,7 +35,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # config.vm.provision :shell, privileged: false, :path => "clean-shutdown.sh"
 end
-
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
 
