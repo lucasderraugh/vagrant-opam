@@ -12,18 +12,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
     vb.name = "cs3110-vm"
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
     vb.customize ["modifyvm", :id, "--vram", "16"]
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-opam.sh"
   # config.vm.provision :shell, privileged: false, :path => "setup-opamdoc.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-3110.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-git.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-tex.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-lablgl.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-sublime.sh"

@@ -11,7 +11,7 @@ export OPAMJOBS=2
 
 opam init -a -y
 eval `opam config env`
-opam switch 4.02.1
+opam switch 4.02.2
 eval `opam config env`
 
 opam install -y async utop merlin pa_ounit qcheck 
@@ -26,8 +26,6 @@ cat > ~/.ocamlinit <<EOF
 EOF
 
 cat >> ~/.bashrc <<EOF
-
 alias ocaml=utop
-
 EOF
 
