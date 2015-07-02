@@ -1,3 +1,11 @@
+Summer 2015:
+MRC: I tried updating to Ubuntu 15.04 and the latest OCaml toolchain.
+
+* lxde (vanilla) is frequently crashing and restarting the window manager
+* I have to [eval `opam config env`] otherwise utop crashes with an Out of memory exception
+
+
+From before Summer 2015:
  - introduce new targets for the 3110-tools/cs3110-cli Makefile
      to build staff or student versions
      (avoid the need to comment/uncomment the target list in cli_main.ml)
