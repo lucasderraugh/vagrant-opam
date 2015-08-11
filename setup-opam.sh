@@ -23,8 +23,6 @@ cat > ~/.ocamlinit <<EOF
 #use "topfind";;
 #thread;;
 #camlp4o;;
-#require "core.top";;
-#require "core.syntax";;
 EOF
 
 cat >> ~/.bashrc <<EOF
