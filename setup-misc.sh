@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# time zone fix
-cat >> ~/.profile <<EOF
-
-TZ='America/New_York'; export TZ
-
-EOF
-
+#set up timezone
+echo "America/New_York" | sudo tee /etc/timezone
+sudo dpkg-reconfigure --frontend noninteractive tzdata
