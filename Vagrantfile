@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
-    vb.name = "cs3110-staffVM"
+    vb.name = "cs3110"
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
