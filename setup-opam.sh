@@ -16,7 +16,7 @@ eval `opam config env`
 opam switch 4.02.1
 eval `opam config env`
 
-opam install async utop merlin pa_ounit qcheck 
+opam install async utop merlin pa_ounit qcheck lwt
 
 # Configure an .ocamlinit
 cat > ~/.ocamlinit <<EOF
