@@ -26,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-lxde.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-tex.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-lablgl.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-gtk.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-sublime.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-jre.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-misc.sh"
