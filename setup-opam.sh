@@ -13,7 +13,7 @@ export OPAMJOBS=2
 
 opam init -a -y
 eval `opam config env`
-opam switch 4.02.1
+opam switch 4.02.3
 eval `opam config env`
 
 opam install async utop merlin pa_ounit qcheck lwt
