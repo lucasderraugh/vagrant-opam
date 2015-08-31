@@ -31,3 +31,5 @@ alias ocaml=utop
 
 EOF
 
+cp 3110-tools/config/utoprc ~/.utoprc
+
