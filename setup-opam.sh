@@ -30,6 +30,3 @@ cat >> ~/.bashrc <<EOF
 alias ocaml=utop
 
 EOF
-
-cp 3110-tools/config/utoprc ~/.utoprc
-
