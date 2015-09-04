@@ -21,6 +21,8 @@ opam install async utop merlin pa_ounit qcheck lwt
 # Configure an .ocamlinit
 cat > ~/.ocamlinit <<EOF
 #use "topfind";;
+#require "pa_ounit";;
+#directory "_build";;
 #thread;;
 #camlp4o;;
 EOF
