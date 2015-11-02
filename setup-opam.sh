@@ -16,6 +16,9 @@ eval `opam config env`
 opam switch 4.02.3
 eval `opam config env`
 
+# Use the cs3110 fork of utop
+opam pin add utop https://github.com/cs3110/utop.git
+
 opam install async utop merlin pa_ounit qcheck lwt menhir
 
 # Configure an .ocamlinit
